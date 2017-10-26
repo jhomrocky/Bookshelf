@@ -13,6 +13,8 @@ namespace Bookshelf.Models
         public int ID { get; set; }
         [MinLength(2),MaxLength(50)] //minlength is for TITLE
         public string Title { get;set; }
+        [Display(Name ="Published Date")] //inserting space into "Published Date" since var
+                                          //cannot have spaces in name
         public DateTime PublishedDate { get; set; }
         [MaxLength(500)]
         public string Description { get; set; }
