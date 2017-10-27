@@ -9,48 +9,31 @@
 <div>
     <h4>Book</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Category.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Category.Name)
-        </dd>
-
-        <dt>
+        <h1 style="font-weight:200">
             @Html.DisplayNameFor(model => model.Title)
-        </dt>
+        </h1>
 
-        <dd>
+        <h1>
             @Html.DisplayFor(model => model.Title)
-        </dd>
+        </h1>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PublishedDate)
-        </dt>
+        <h3>
+            @Html.DisplayNameFor(model => model.Category.Name): @Html.DisplayFor(model => model.Category.Name)
+        </h3>
 
-        <dd>
-            @Html.DisplayFor(model => model.PublishedDate)
-        </dd>
+        <h3><i>
+            @Html.DisplayNameFor(model => model.PublishedDate): @Html.DisplayFor(model => model.PublishedDate)
+        </i></h3>
+                @*displaynamefor shows field name, displayfor shows the entry*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
+        <p>
             @Html.DisplayFor(model => model.Description)
-        </dd>
+        </p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ISBN)
-        </dt>
+        <p>
+            @Html.DisplayNameFor(model => model.ISBN): @Html.DisplayFor(model => model.ISBN)
+        </p>
 
-        <dd>
-            @Html.DisplayFor(model => model.ISBN)
-        </dd>
-
-    </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
